@@ -5,7 +5,8 @@ GPIO.setmode(GPIO.BCM)
 
 # GPIO ports for the 7seg pins
 segments = (11, 4, 23, 8, 7, 10, 18, 25)
-# 7seg_segment_pins (11,7,4,2,1,10,5,3) +  100R inline
+
+# 7seg_segment_pins (11,7,4,2,1,10,5,3) +  300R(Type1)/100R(Type2) inline
 
 for segment in segments:
     GPIO.setup(segment, GPIO.OUT)
@@ -13,6 +14,7 @@ for segment in segments:
 
 # GPIO ports for the digit 0-3 pins
 digits = (22, 27, 17, 24)
+
 # 7seg_digit_pins (12,9,8,6) digits 0-3 respectively
 
 for digit in digits:
